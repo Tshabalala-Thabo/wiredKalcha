@@ -79,16 +79,17 @@
                         <div class="message-container col-10 col-md-5 col-lg-3">
 
                             <?php
-                            $sql = "SELECT * FROM messages";
+                            $sql = "SELECT m_id, name, email, message, DATE_FORMAT(datetime, '%d/%m/%Y') date, DATE_FORMAT(datetime, '%k:%s') time FROM messages;";
                             $result = mysqli_query($conn, $sql);
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $m_id = $row['m_id'];
                                 $name = $row['name'];
                                 $email = $row['email'];
-                                $date = $row['datetime'];
+                                $time = $row['time'];
+                                $date = $row['date'];
                                 $message = $row['message'];
                                 echo '
-                                    <a href="#">
+                                    <a href="viewm.php?mid='.$m_id.'">
                                         <div class="m-sub">
                                             <div class="m-head">
                                                 <div class="m-name">'.$name.'</div>

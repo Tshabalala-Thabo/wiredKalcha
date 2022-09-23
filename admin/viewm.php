@@ -1,4 +1,7 @@
-<?php include '../php/connection.php'; ?>
+ <?php 
+    include '../php/connection.php'; 
+    $m_id = $_GET['mid'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
