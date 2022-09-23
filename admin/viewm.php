@@ -1,6 +1,16 @@
  <?php 
     include '../php/connection.php'; 
     $m_id = $_GET['mid'];
+
+    $sql = "SELECT m_id, name, email, message, DATE_FORMAT(datetime, '%d/%m/%Y') date, DATE_FORMAT(datetime, '%k:%s') time FROM messages;";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $m_id = $row['m_id'];
+    $name = $row['name'];
+    $email = $row['email'];
+    $time = $row['time'];
+    $date = $row['date'];
+    $message = $row['message'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Videos | Portal</title>
+    <title>Messages | <?php echo $name;?></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -97,7 +107,7 @@
         <div class="main-c">
             <div class="p-header">
                 <div class="underline"></div>
-                <h1>Music Videos</h1>
+                <h1>Message</h1>
                 <div class="underline"></div>
                 <br>
                
