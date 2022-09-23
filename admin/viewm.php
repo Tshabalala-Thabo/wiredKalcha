@@ -2,7 +2,7 @@
     include '../php/connection.php'; 
     $m_id = $_GET['mid'];
 
-    $sql = "SELECT m_id, name, email, message, DATE_FORMAT(datetime, '%d/%m/%Y') date, DATE_FORMAT(datetime, '%k:%s') time FROM messages;";
+    $sql = "SELECT m_id, name, email, phone, message, subject, DATE_FORMAT(datetime, '%d/%m/%Y') date, DATE_FORMAT(datetime, '%k:%s') time FROM messages;";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $m_id = $row['m_id'];
@@ -11,6 +11,8 @@
     $time = $row['time'];
     $date = $row['date'];
     $message = $row['message'];
+    $subject = $row['subject'];
+    $phone = $row['phone'];
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -109,11 +111,22 @@
                 <div class="underline"></div>
                 <h1>Message</h1>
                 <div class="underline"></div>
-                <br>
-               
+
             </div>
             <div class="p-content">
-                
+                <div class="container">
+                    <div class="mv-heading">
+                        <h3>Name : <?php echo $name;?></h3>
+                        <h3>Email : <?php echo $email;?></h3>
+                        <h3>Phone : <?php echo $phone;?></h3>
+                        <h3>Subject : <?php echo $subject;?></h3>
+                    </div>
+                    <div class="mv-details">
+                        <?php echo $message;?>
+                    </div>
+                    <br>
+                    <button class="btn btn-danger">Delete Message</button>
+                </div>
             </div>
         </div>
     </div>
