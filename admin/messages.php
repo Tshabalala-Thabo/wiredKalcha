@@ -56,6 +56,7 @@
                 <br>
             </div>
             <div class="p-content">
+                <div class="container">
                 <div class="row justify-content-center">
                     <!--?php
                     $sql = "SELECT v_link, v_id FROM videos WHERE v_type = 'm'";
@@ -106,7 +107,7 @@
                                 <div class="m-datetime">10 Sep 2022</div>
                             </div>
                             <br>
-                            <div class="m-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur dolor atque praesentium ab ullam explicabo ad debitis assumenda dolores. Accusantium nihil laborum veritatis quas architecto necessitatibus ad optio officiis!</div>
+                            <div class="m-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur dolor atque praes\rum veritatis quas architecto necessitatibus ad optio officiis!</div>
                         </div>
                     </div>
 
@@ -117,11 +118,33 @@
                                 <div class="m-datetime">10 Sep 2022</div>
                             </div>
                             <br>
-                            <div class="m-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur dolor atque praesentium ab ullam explicabo ad debitis assumenda dolores. Accusantium nihil laborum veritatis quas architecto necessitatibus ad optio officiis!</div>
+                            <div class="m-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur dolor atque praesentium ab ullam explicabo ad debitis assumenda dolores. Accusantiu</div>
+                        </div>
+                    </div>
+
+                    <div class="message-container col-10 col-md-5 col-lg-3">
+                        <div class="m-sub">
+                            <div class="m-head">
+                                <div class="m-name">Thabo</div>
+                                <div class="m-datetime">10 Sep 2022</div>
+                            </div>
+                            <br>
+                            <div class="m-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur dolor atque praesentium ab ullam explicabo ad debitis assumenda dolores. Accusantiu</div>
+                        </div>
+                    </div>
+                    <div class="message-container col-10 col-md-5 col-lg-3">
+                        <div class="m-sub">
+                            <div class="m-head">
+                                <div class="m-name">Thabo</div>
+                                <div class="m-datetime">10 Sep 2022</div>
+                            </div>
+                            <br>
+                            <div class="m-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod pariatur dolor atque praesentium ab ullam explicabo ad debitis assumenda dolores. Accusanti</div>
                         </div>
                     </div>
 
 
+                </div>
                 </div>
             </div>
         </div>
