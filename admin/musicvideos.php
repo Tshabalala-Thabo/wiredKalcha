@@ -115,7 +115,7 @@
                                         <iframe width="560" height="315" src="https://www.youtube.com/embed/' . $link . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                     <div class="v-actions">
-                                    <a href="delvid.php?vid='.$v_id.'"><button class="btn btn-danger">Delete</button></a>
+                                    <a href="delvid.php?vid='.$v_id.'&vtype=m"><button class="btn btn-danger">Delete</button></a>
                                     </div>
                                 </div>
                             ';
