@@ -2,6 +2,9 @@
     //connection
     include '../php/connection.php';
 
+    echo  $_GET['vtype'];
+    echo  $_POST['link'];
+
     //data
     if(isset($_POST['link']))
     {

@@ -14,7 +14,7 @@
                 <a href="musicvideos.php">
                     <li class="menu-item"><i class="fa fa-film"></i>Music Videos</li>
                 </a>
-                <a href="home.php"><a href="home.php">
+                <a href="home.php"><a href="socials.php">
                         <li class="menu-item"><i class="fa fa-users"></i>Socials</li>
                     </a>
                     <a href="messages.php">
