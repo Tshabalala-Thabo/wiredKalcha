@@ -3,12 +3,11 @@
     include '../php/connection.php';
 
     //data
-    if(isset($_POST['link']))
+    if(isset($_GET['vtype']) && isset($_GET['vid']))
     {
         //print_r($_POST);
         $vtype = $_GET['vtype'];
         $vid = $_GET['vid'];
-        $link = substr($link, strpos($link,"=") + 1);
 
         //$query = "INSERT INTO videos (v_id, v_link, v_index, timestmp, v_type) VALUES ('NULL', '$link', '0', 'current_timestamp()', '$vtype');";
         $query = "DELETE FROM videos WHERE videos.v_id = '$vid';";
