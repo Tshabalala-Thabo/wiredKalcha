@@ -3,7 +3,7 @@
     include '../php/connection.php';
 
     //data
-    if(isset($_GET['vtype']) && isset($_GET['vid']))
+    if(isset($_GET['mid']))
     {
         $mid = $_GET['mid'];
 
@@ -16,7 +16,7 @@
         {
             echo '<script> alert("Video successfuly deleted");</script>';
             if ($vtype == 'm'){
-                header('Location: viewm.php');
+                header('Location: messages.php');
             }
             else{
                 header('Location: home.php');

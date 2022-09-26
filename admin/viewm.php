@@ -2,7 +2,7 @@
     include '../php/connection.php'; 
     $m_id = $_GET['mid'];
 
-    $sql = "SELECT m_id, name, email, phone, message, subject, DATE_FORMAT(datetime, '%d/%m/%Y') date, DATE_FORMAT(datetime, '%k:%s') time FROM messages;";
+    $sql = "SELECT m_id, name, email, phone, message, subject, DATE_FORMAT(datetime, '%d/%m/%Y') date, DATE_FORMAT(datetime, '%k:%s') time FROM messages WHERE messages.m_id = '$m_id';";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $m_id = $row['m_id'];
@@ -125,7 +125,7 @@
                         <?php echo $message;?>
                     </div>
                     <br>
-                    <button class="btn btn-danger">Delete Message</button>
+                    <a href="remmes.php?mid=<?php echo $m_id; ?>"><button class="btn btn-danger">Delete Message</button></a>
                 </div>
             </div>
         </div>
